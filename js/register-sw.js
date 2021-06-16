@@ -12,12 +12,10 @@ else {
 // Event Listener para Offline/ Online Status
 window.addEventListener('offline', event => {
   document.querySelector('body').classList.add('offline');
-  main.innerHTML = "No obtener los partidos! La aplicacion esta offline!"
 });
 
 window.addEventListener('online', event => {
   document.querySelector('body').classList.remove('offline');
-  openSoccerApi();
 });
 
 // A veces este evento falla, ojo!
@@ -27,5 +25,4 @@ window.addEventListener('online', event => {
 
 if (!navigator.onLine) {
   document.querySelector('body').classList.add('offline');
-  main.innerHTML = "No obtener los partidos! La aplicacion esta offline!"
 }
